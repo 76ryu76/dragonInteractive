@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="custom.css" />
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slide");
+        if (n > x.length) {
+          slideIndex = 0;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+
+    <title>DragonInteractive</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#games">Games</a>
+      <a href="#about">About us</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <h1>Welcome</h1>
+
+    <div class="slideshow">
+      <div class="image-container">
+        <img src="/SlideshowPictures/slide1.png" class="slide" />
+        <img src="/SlideshowPictures/slide2.png" class="slide" />
+        <img src="/SlideshowPictures/slide3.png" class="slide" />
+        <img src="/SlideshowPictures/slide4.png" class="slide" />
+      </div>
+
+      <div class="btn-container">
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">
+          &#10094;
+        </button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">
+          &#10095;
+        </button>
+      </div>
+
+      <p>
+        We are DragonInteractive, the promising game studio start-up from
+        Germany!
+      </p>
+    </div>
+
+    <div id="games">
+      <h2>Our Games</h2>
+
+      <div class="game-list">
+        <div class="game-1 grid-game">
+          <button class="grid-btn">
+            <img src="https://via.placeholder.com/150" alt="" />
+            <p>Fallen Knight</p>
+          </button>
+        </div>
+
+        <div class="game-2 grid-game">
+          <button class="grid-btn">
+            <img src="https://via.placeholder.com/150" alt="" />
+            <p>Lorem ipsum</p>
+          </button>
+        </div>
+
+        <div class="game-3 grid-game">
+          <button class="grid-btn">
+            <img src="https://via.placeholder.com/150" alt="" />
+            <p>Lorem ipsum</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <h2>About us</h2>
+
+      <p>
+        We are a small developer team based near Stuttgart, Germany. It is our
+        mission to bring happines to the man through video games.
+      </p>
+      <p>
+        Obviously our games are not the best, we know that, but with each game
+        that we develope, we learn how to improve past games and provide future
+        games a stable foundation. So that maybe one day, we can make a AAA
+        title that everyone can enjoy.
+      </p>
+    </div>
+
+    <div id="contact">
+      <h2 class="end-text">Any Questions?</h2>
+      <h2>Feel free to contact us</h2>
+
+      <form
+        id="contact_form"
+        action="#"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="row">
+          <label class="required" for="name">Your name:</label><br />
+          <input
+            id="name"
+            class="input"
+            name="name"
+            type="text"
+            value=""
+            size="30"
+          /><br />
+          <span id="name_validation" class="error_message"></span>
+        </div>
+        <div class="row">
+          <label class="required" for="email">Your email:</label><br />
+          <input
+            id="email"
+            class="input"
+            name="email"
+            type="text"
+            value=""
+            size="30"
+          /><br />
+          <span id="email_validation" class="error_message"></span>
+        </div>
+        <div class="row">
+          <label class="required" for="message">Your message:</label><br />
+          <textarea
+            id="message"
+            class="input"
+            name="message"
+            rows="7"
+            cols="30"
+          ></textarea
+          ><br />
+          <span id="message_validation" class="error_message"></span>
+        </div>
+
+        <input id="submit_button" type="submit" value="Send email" />
+      </form>
+
+      <p>E-Mail: contact@dragoninteractive.de</p>
+      <p>Instagram: @dragoninteractive</p>
+    </div>
+  </body>
+  <footer></footer>
+</html>
