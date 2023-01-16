@@ -1,0 +1,128 @@
+* {
+  text-align: center;
+  font-family: monospace;
+}
+
+p {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+body {
+  background-color: #dbbf21;
+}
+
+.navigation {
+  background-color: #124894;
+  overflow: hidden;
+  color: white;
+}
+
+.navigation a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.navigation a:hover {
+  background-color: #bec9fa;
+  color: #000;
+}
+
+.navigation a.active {
+  background-color: #0c5ac7;
+  color: white;
+}
+
+.slideshow {
+  align-items: center;
+}
+
+.slideshow .image-container {
+  margin-bottom: 15px;
+}
+
+.slideshow .slide {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: none;
+}
+
+.w3-button .w3-display-right {
+  background-color: #aa1327;
+  width: 50px;
+}
+
+.w3-button .w3-display-left {
+  background-color: #aa1327;
+  width: 50px;
+}
+
+#games {
+  margin-top: 100px;
+}
+
+.game-list {
+  display: grid;
+  background-color: #124894;
+  padding: 20px 20px 20px 20px;
+}
+
+.game-list .grid-game {
+  background-color: #aa1327;
+  color: white;
+  padding-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 236px;
+}
+
+.game-list .grid-game .grid-btn {
+  background-color: #dbbf21;
+  padding-top: 10px;
+  width: 250px;
+}
+
+.game-list .grid-game .grid-btn:hover {
+  background-color: #c0a611;
+}
+
+.game-list .game-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.game-list .game-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.game-list .game-3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#about {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+#contact_form {
+  font-size: 16px;
+  font-family: monospace;
+  margin-bottom: 15px;
+}
+
+.end-text {
+  margin-bottom: -16.5px;
+}
+
+footer {
+  background-color: #bfaa30;
+}
